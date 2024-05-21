@@ -1,0 +1,32 @@
+const new_nft = []
+function minft(name, mark, classes, crypto){
+    const nft={
+        "names": name, 
+        "Marks": mark,
+        "Class": classes,
+        "cryptos":crypto
+    }
+    new_nft.push(nft);
+    console.log("minted: " + name);
+} 
+
+function loopnft(){
+   for(let k=0; k<new_nft.length; k++){
+    console.log("\nUID: \t"+(k+1))
+    console.log("Name:\t"+ new_nft[k].names);
+    console.log("Marks:\t"+ new_nft[k].Marks);
+    console.log("Class:\t" + new_nft[k].Class);
+    console.log("crypto:\t" + new_nft[k].cryptos);
+   }
+}
+
+function gettotal(){
+    console.log("\n"+ new_nft.length);
+}
+
+minft("Kartik","55","higherschool","bitcoin");
+minft("raghav","65","kindergarden","ethereum");
+minft("piyush","76","midschool","solana");
+minft("joy","89","midclass","polkadot");
+loopnft();
+gettotal();
